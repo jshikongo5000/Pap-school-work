@@ -40,7 +40,7 @@ void addEmployee() {
   if( employeeCount>= Max_EMPLOYEES) {
     printf("Employee List is full\n");
     return
-    }
+  }
 
   Employee NewEmployee;
   newEmployee.id = readPosititiveInt("Enter Employeee ID: ");
@@ -48,13 +48,13 @@ void addEmployee() {
   if (findEmployeeIndex(newEmployee,id) != -1) {
     print("Error: Employee ID %d already exist.\n", newEmployee.id);
     return;
-    }
+  }
 
   readline("eenter name", newEmployee.name NAME_LENGTH);
   if (strlen(newEmployee.name) == 0) {
     printf(Error: Name cannotbe empty.\n);
       return;
-    }
+  }
 
   readLine("Enter department: "newEmployee.department,DEPARTMENT_LENGTH)P;
 
@@ -90,10 +90,10 @@ void displayEmployees(void){
     printf("No employees registered.\n");
     return;
   }
-    printf("\n%-6s %-22s %-14s %12s %12s %12s %12s\n",
+   printf("\n%-6s %-22s %-14s %12s %12s %12s %12s\n",
           "ID", "Name", "Department", "Basic", "Housing", "Transport", "Gross");
-    printf("----------------------------------------------------------------------------------------------------\n");
-    displayEmployeesRecursive(0);
+   printf("----------------------------------------------------------------------------------------------------\n");
+   displayEmployeesRecursive(0);
 }
 
 void searchEmployee(void) {
